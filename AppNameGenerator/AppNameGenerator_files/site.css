@@ -1,0 +1,39 @@
+body {
+	padding-top: 50px; padding-bottom: 20px;
+}
+.body-content {
+	padding-right: 15px; padding-left: 15px; margin-top: 15px;
+}
+input {
+	max-width: 280px;
+}
+select {
+	max-width: 280px;
+}
+textarea {
+	max-width: 280px;
+}
+.field-validation-error {
+	color: rgb(185, 74, 72);
+}
+.field-validation-valid {
+	display: none;
+}
+input.input-validation-error {
+	border: 1px solid rgb(185, 74, 72);
+}
+input[type='checkbox'].input-validation-error {
+	border: 0px currentColor;
+}
+.validation-summary-errors {
+	color: rgb(185, 74, 72);
+}
+.validation-summary-valid {
+	display: none;
+}
+ul.unstyled {
+	list-style: none; margin: 0px; padding: 0px;
+}
+ul.unstyled > li {
+	list-style: none;
+}

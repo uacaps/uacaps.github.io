@@ -1,1 +1,113 @@
-test
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0023)http://localhost:32700/ -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=10.000" 
+http-equiv="X-UA-Compatible">
+     
+<META charset="utf-8">     
+<META name="viewport" content="width=device-width, initial-scale=1.0">     
+<TITLE>Home Page - My ASP.NET Application</TITLE>     <LINK href="AppNameGenerator_files/bootstrap.css" 
+rel="stylesheet"> <LINK href="AppNameGenerator_files/site.css" rel="stylesheet"> 
+    
+<SCRIPT src="AppNameGenerator_files/modernizr-2.6.2.js"></SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 10.00.9200.16863"></HEAD> 
+<BODY>
+<DIV class="navbar navbar-inverse navbar-fixed-top">
+<DIV class="container">
+<DIV class="navbar-header"><BUTTON class="navbar-toggle" type="button" 
+data-toggle="collapse" data-target=".navbar-collapse"><SPAN 
+class="icon-bar"></SPAN><SPAN class="icon-bar"></SPAN><SPAN 
+class="icon-bar"></SPAN></BUTTON>                 <A class="navbar-brand" href="http://localhost:32700/">App 
+Name Generator</A>             </DIV>
+<DIV class="navbar-collapse collapse">
+<UL class="nav navbar-nav">
+  <LI><A href="http://localhost:32700/">Home</A></LI>
+  <LI><A href="http://localhost:32700/Home/About">About</A></LI>
+  <LI><A 
+href="http://localhost:32700/Home/Contact">Contact</A></LI></UL></DIV></DIV></DIV>
+<DIV class="container body-content">
+<FORM>
+<DIV class="row">
+<DIV class="col-md-3">
+<DIV class="form-group"><LABEL>Min Combined Word Syllabes:</LABEL>               
+  <INPUT class="form-control" type="text" data-bind="value: minSyllables"></DIV>
+<DIV class="form-group"><LABEL>Max Combined Word Syllabes:</LABEL>               
+  <INPUT class="form-control" type="text" data-bind="value: maxSyllables"></DIV>
+<DIV class="form-group"><LABEL>Buzz Words:</LABEL>                 
+<DIV class="input-group"><INPUT class="form-control" type="text" placeholder="Add Buzz Word" 
+value="" data-bind="value: newBuzzWord">                     <SPAN class="input-group-btn"><BUTTON 
+class="btn btn-default" type="button" 
+data-bind="click: addBuzzWord">Add</BUTTON>                     </SPAN>          
+       </DIV>
+<UL class="list-group" data-bind="foreach: buzzWords">
+  <LI class="list-group-item"><B data-bind="text: word"></B>                     
+      <BUTTON class="btn btn-xs btn-danger pull-right" type="button" data-bind="click: removeBuzzWord">Remove</BUTTON> 
+                          
+  <UL class="unstyled">
+    <LI>                                non-end <INPUT type="checkbox" 
+    data-bind="checked: isAdjective">                             </LI>
+    <LI>                                non-start <INPUT type="checkbox" 
+    data-bind="checked: isNonStart">                             
+</LI></UL></LI></UL></DIV></DIV>
+<DIV class="col-md-3">
+<DIV class="form-group"><LABEL>Max Acronym Length:</LABEL>                 
+<INPUT class="form-control" type="text" 
+data-bind="value: maxAcronymLength"></DIV>
+<DIV class="form-group"><LABEL>Prefixes:</LABEL>                 
+<DIV class="input-group"><INPUT class="form-control" type="text" placeholder="Add Buzz Word" 
+value="" data-bind="value: newPrefix">                     <SPAN class="input-group-btn"><BUTTON 
+class="btn btn-default" type="button" data-bind="click: addPrefix">Add</BUTTON>  
+                   </SPAN>                 </DIV>
+<UL class="list-group" data-bind="foreach: prefixes">
+  <LI class="list-group-item"><SPAN data-bind="text: word"></SPAN> <BUTTON 
+  class="btn btn-xs pull-right btn-danger" type="button" data-bind="click: removePrefix">Remove</BUTTON> 
+                      </LI></UL></DIV>
+<DIV class="form-group"><LABEL>Postfixes:</LABEL>                 
+<DIV class="input-group"><INPUT class="form-control" type="text" placeholder="Add Buzz Word" 
+value="" data-bind="value: newPostfix">                     <SPAN class="input-group-btn"><BUTTON 
+class="btn btn-default" type="button" data-bind="click: addPostfix">Add</BUTTON> 
+                    </SPAN>                 </DIV>
+<UL class="list-group" data-bind="foreach: postfixes">
+  <LI class="list-group-item"><SPAN data-bind="text: word"></SPAN> <BUTTON 
+  class="btn btn-xs pull-right btn-danger" type="button" data-bind="click: removePostfix">Remove</BUTTON> 
+                      </LI></UL></DIV><BUTTON class="btn btn-primary" type="button" 
+data-bind="click: generateNames">Generate Names</BUTTON>         </DIV>
+<DIV class="col-md-6">
+<H3>Results:</H3>
+<UL class="list-group" data-bind="foreach: matches">
+  <LI class="list-group-item"><SPAN data-bind="text: word"></SPAN>               
+        <SPAN data-bind="if: buzzWords.length > 0">                        
+  (<SPAN data-bind="foreach: buzzWords"><SPAN 
+  data-bind="text: $data"></SPAN>&nbsp;</SPAN>)                     </SPAN>      
+             </LI></UL></DIV></DIV></FORM>
+<DIV class="row">
+<DIV class="col-md-6">
+<FORM>
+<DIV class="row">
+<DIV class="col-md-6"></DIV>
+<DIV class="col-md-6"></DIV></DIV></FORM></DIV>
+<DIV class="col-md-6"></DIV></DIV>
+<HR>
+<FOOTER>
+<P>© 2014 - CAPS</P></FOOTER></DIV>
+<SCRIPT src="AppNameGenerator_files/jquery-2.1.0.js"></SCRIPT>
+     
+<SCRIPT src="AppNameGenerator_files/bootstrap.js"></SCRIPT>
+ 
+<SCRIPT src="AppNameGenerator_files/respond.js"></SCRIPT>
+     
+<SCRIPT src="AppNameGenerator_files/knockout-3.1.0.debug.js"></SCRIPT>
+     
+<SCRIPT src="AppNameGenerator_files/array.extend.js"></SCRIPT>
+     
+<SCRIPT src="AppNameGenerator_files/appnamegenerator.js"></SCRIPT>
+ 
+<SCRIPT src="AppNameGenerator_files/wordList2.js"></SCRIPT>
+     
+<SCRIPT>
+        $(document).ready(function () {
+            var vm = new AppNameGeneratorViewModel();
+            ko.applyBindings(vm);
+        });
+    </SCRIPT>
+ </BODY></HTML>
